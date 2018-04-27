@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+    <title>No.2 - 初步接触 CSS 2D 变形</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .box{
+            display: inline-block;
+            margin:10px ;
+            box-sizing: border-box;
+            width: 60px;
+            height: 68px;
+            border:1px solid #ebebeb;
+            background-color: #f7f6f6;
+            text-align: center;
+            font:12px/68px "微软雅黑";
+            font-weight: 700;
+        }
+        .box1{
+            -webkit-transform: skewX(30deg);
+            -ms-transform: skewX(30deg);
+            transform: skewX(30deg);/*左倾斜为正*/
+        }
+        .box2{
+            -webkit-transform: scaleX(0.5);
+            -moz-transform: scaleX(0.5);
+            -ms-transform: scaleX(0.5);
+            transform: scaleX(0.5);
+        }
+        .box3{
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .box4{
+            -webkit-transform: translate(10px, 20px);
+            -moz-transform: translate(10px, 20px);
+            -ms-transform: translate(10px, 20px);
+            transform: translate(10px, 20px);
+        }
+        .box5{
+            -webkit-transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px, 20px);
+            -moz-transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px, 20px);
+            -ms-transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px, 20px);
+            transform: skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px, 20px);    /*2D的可以组合使用*/
+        }
+    </style>
+</head>
+<body>
+ <div class="box">box0</div>
+ <div class="box box1">box1</div>
+ <div class="box box2">box2</div>
+ <div class="box box3">box3</div>
+ <div class="box box4">box4</div>
+ <div class="box box5">box5</div>
+</body>
+</html>

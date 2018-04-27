@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0">
+    <title>No.1 - 制作一个简单的菜单动画效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size:20px;
+        }
+        .box{
+            width: 120px;
+            height: 60px;
+            margin:0 auto;
+            position: relative;
+        }
+        .info{
+            width: 100px;
+            height: 50px;
+            margin:0 auto ;
+            text-align:center;
+            line-height: 50px;
+            -webkit-transition: color 1s;
+            -moz-transition: color 1s;
+            -o-transition: color 1s;
+            transition: all 0.5s ease ;
+        }
+        .btn,.btn2{
+            width: 100px;
+            height: 40px;
+            margin:0 auto;
+            border:1px solid #ccc;
+            border-radius:10px;
+            text-align:center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        .box .bar{
+            height: 5px;
+            width:0;
+            display: block;
+            margin:0 auto; /*从中心到宽度100%*/
+            background-color: #3366FF;
+            -webkit-transition: width 0.5s linear;
+            -moz-transition: width 0.5s linear;
+            -o-transition: width 0.5s linear;
+            transition: width 0.5s ease-in-out;
+        }
+        /*王佳培*/
+        .text-box{
+            position: relative;
+            width: 120px;
+            padding:5px 10px;
+            margin:60px auto;
+            text-align: center;
+        }
+        .text,.dash{
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s ease-in-out;
+        }
+        .dash{
+            position: absolute;
+            left:50%;
+            bottom: 0;
+            width: 0;
+            height: 5px;
+            background-color: #3366FF;
+
+        }
+
+    </style>
+</head>
+<body>
+   <!--2018.4.25修改-->
+ <div class="box">
+     <div class="info" style="color:#000;">前端学院</div>
+     <span class="bar"></span>
+ </div>
+ <div class="btn">切换样式</div>
+ <div class="btn2">切换样式</div>
+   <!--王佳培的方法-->
+  <div class="text-box">
+      <span class="text">前端学院</span>
+      <i class="dash"></i>
+  </div>
+   <div class="btn btn3">切换样式</div>
+   <div class="btn btn4">切换样式</div>
+
+
+
+
+ <script>
+     var $=function(id){return document.querySelector(id)};
+     void function(){
+         $(".btn").onclick=function(){
+             $(".info").style.color="#3366FF";//js点击事件触发transition
+             $(".bar").style.width=100+"%";
+             setTimeout(function(){
+                 $(".info").style.color="#000";
+                 $(".bar").style.width=0;
+             },500) //延时定时器返回原状态。
+         }
+         $(".btn2").onclick=function(){
+            if($(".bar").offsetWidth==0) //不能用$(".bar").style.width==0;
+            {
+                $(".info").style.color="#3366FF";
+                $(".bar").style.width=100+"%";
+            }else{
+                $(".info").style.color="#000";
+                $(".bar").style.width=0;
+            }
+         }
+
+     }()
+      void function(){
+          $(".btn3").onclick=function(){
+              $(".text").style.color="#3366FF";//js点击事件触发transition
+              $(".dash").style.width=100+"%";
+              $(".dash").style.left=0;
+              setTimeout(function(){
+                  $(".text").style.color="#000";
+                  $(".dash").style.width=0;
+                  $(".dash").style.left=50+"%";
+
+              },500) //延时定时器返回原状态。
+          }
+          $(".btn4").onclick=function(){
+              if($(".dash").offsetWidth==0) //不能用$(".bar").style.width==0;
+              {
+                  $(".text").style.color="#3366FF";//js点击事件触发transition
+                  $(".dash").style.width=100+"%";
+                  $(".dash").style.left=0;
+              }else{
+                  $(".text").style.color="#000";
+                  $(".dash").style.width=0;
+                  $(".dash").style.left=50+"%";
+              }
+          }
+      }()
+
+ </script>
+
+</body>
+</html>

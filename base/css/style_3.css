@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/*头部*/
+h1{
+    height: 70px;
+    color:#ffff;
+    line-height: 70px;
+    background-color: #cccccc;
+    margin:0;
+    text-indent:30px;
+}
+h2{
+    margin: 0;
+}
+.info h2{
+    float:left;
+    width: 10%;
+    height: 100px;
+    background-color: #666;
+    box-sizing: border-box;
+    border-bottom:1px solid #fff;
+    text-align: center;
+    line-height: 100px;
+}
+.info .wrap{
+    float:left;
+    width:90%;
+    height:100px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    padding:10px 0 0 10px;
+
+}
+.wrap p,.wrap span{
+    display: inline-block;
+    margin-right:30px;
+}
+.bold{
+    font-weight: bold;
+}
+.title{
+    font-weight: bold;
+    margin:0;
+}

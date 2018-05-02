@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .circle-wrap, .circle-wrap .percent, .wrap-box {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+        }
+        .circle-wrap.clip-auto {
+            clip: rect(auto, auto, auto, auto);
+        }
+      .left-clip {
+            transform: rotate(324deg);
+            transition: 2s;
+        }
+        .circle-wrap .left-clip {
+            clip: rect( 0 70px 140px 0);
+            transition: transform ease;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap-box">
+    <div class="circle-wrap clip-auto">
+        <div class="left-clip percent"></div>
+        <div class="right-clip percent"></div>
+    </div>
+    <div class="circle-num"></div>
+</div>
+</body>
+</html>

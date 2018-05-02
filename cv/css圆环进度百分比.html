@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .loading{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            overflow: hidden;
+            z-index: 999;
+            transform: translate(-50%,-50%);
+        }
+        .circle{
+            box-sizing: border-box;
+            border:10px #cccccc solid;
+            width: 100px;
+            height: 100px;
+            border-radius:50%;
+            /*clip:rect(0,100px,100px,50px);*/
+        }
+        .clip-out{
+            /*clip:rect(auto,auto,auto,auto);*/
+        }
+        .left{
+            transition: transform ease;
+            width: 100px;
+            height: 100px;
+            border:10px solid #FF0000;
+            border-radius: 50%;
+            box-sizing: border-box;
+            position: fixed;
+            top:0;
+            left:0;
+            clip:rect(auto,50px,auto,auto);
+        }
+        .right{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border:10px solid #FF0000;
+            box-sizing: border-box;
+            position: fixed;
+            top:0;
+            right:0;
+            clip:rect(auto,auto,auto,50px);
+        }
+        .width-none{
+            width: 0;
+        }
+        .auto{
+            clip:auto;
+        }
+    </style>
+</head>
+<body>
+<div id="loading" class="loading">
+    <div class="circle">
+        <div class="percent left"></div>
+        <div class="percent right wth0"></div>
+    </div>
+    <div class="per"></div>
+</div>
+<script >
+    let clip = document.querySelector('.clip'),
+        left = document.querySelector('.left'),
+        right = document.querySelector('.right'),
+        num = document.querySelector('.num'),
+        rotate = 0;
+
+    let loop = setInterval(() => {
+        if(rotate >= 100){
+        rotate = 0;
+        right.classList.add('width-none');
+        clip.classList.remove('auto');
+    } else if(rotate > 50){
+        right.classList.remove('width-none');
+        clip.classList.add('auto');
+    }
+    rotate++;
+    left.style.transform = 'rotate('+ 3.6*rotate + 'deg)';
+    num.innerHTML = `${rotate}%`
+    },100)
+
+</script>
+</body>
+</html>

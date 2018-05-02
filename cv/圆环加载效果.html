@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆环加载效果</title>
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        .circle{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            border:10px solid #ccc;
+            border-radius: 50%;
+        }
+        .left,.right{
+            position: absolute;
+            top:-10px;
+            width: 100px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .left{
+            left:-10px;
+        }
+        .right{
+            right:-10px;
+        }
+        .circle-l, .circle-r {
+            position: absolute;
+            top:0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border:10px solid #FF0000;
+
+        }
+        .circle-l{
+            left:0;
+            border-right: transparent 10px solid;
+            border-top: transparent 10px solid;
+            transform: rotate(45deg);
+            /*transition: all 1s ;*/
+            animation: rot 2s ease-in-out infinite ;
+
+        }
+        .circle-l:hover{
+           transform: rotate(225deg);
+        }
+        .circle-r{
+            right:0;
+            border-left: transparent 10px solid;
+            border-top: transparent 10px solid;
+            transform: rotate(-45deg);
+            animation: rot2 2s ease-in-out infinite ;
+        }
+        @keyframes rot {
+            0%{transform: rotate(45deg)}
+        50%,100%{transform:rotate(225deg)}
+        }
+        @keyframes rot2 {
+            0%,50%{transform: rotate(-45deg)}
+            100%{transform:rotate(135deg)}
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="box">
+    <div class="circle">
+        <div class="left"><div class="circle-l"></div></div>
+        <div class="right"><div class="circle-r width-none"></div></div>
+    </div>
+    <div class="pre"></div>
+</div>
+</body>
+</html>

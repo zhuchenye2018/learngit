@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆环加载效果2</title>
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        .circle{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            border:10px solid #ccc;
+            border-radius: 50%;
+        }
+        .left{
+            height: 200px;
+            width: 200px;
+            border:10px solid #FF0000;
+            position: absolute;
+            top:-10px;
+            left:-10px;
+            border-radius: 50%;
+            clip:rect(auto,100px,auto,auto);
+            animation: rot 2s ease-in-out 1;
+
+        }
+        .right{
+            height: 200px;
+            width: 200px;
+            border:10px solid #FF0000;
+            position: absolute;
+            top:-10px;
+            right:-10px;
+            border-radius: 50%;
+            clip: rect(auto,auto,auto,100px);
+            /*animation: rot2 2s ease-in-out 1 ;*/
+        }
+        @keyframes rot {
+            0%{transform: rotate(0)}
+            50%,100%{transform: rotate(180deg)}
+        }
+        @keyframes rot2 {
+            0%{transform: rotate(0) }
+            50%,100%{transform: rotate(180deg)}
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="circle">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="pre"></div>
+</div>
+</body>
+</html>

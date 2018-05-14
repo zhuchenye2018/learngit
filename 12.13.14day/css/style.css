@@ -1,0 +1,183 @@
+.u01,
+.u02,
+.u03,
+.u04,
+.u05,
+.u06,
+.u07,
+.u08,
+.u09,
+.u010,
+.u011,
+.u012,
+.u013 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  cursor: pointer;
+}
+.aside-global {
+  position: fixed;
+  height: 100%;
+  width: 22.15%;
+  background-color: #1d2531;
+}
+.aside-global .aside-menu {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #222c3c;
+}
+.aside-global .icon-group {
+  width: 30%;
+}
+.aside-global .icon-group .box {
+  position: relative;
+}
+.aside-global .icon-group .box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-top: 4px solid transparent;
+  border-left: 4px solid #2097f0;
+  border-bottom: 4px solid transparent;
+  display: inline-block;
+}
+.aside-global .icon-group img {
+  cursor: pointer;
+}
+.aside-global .icon-group .Bottom-Actions {
+  margin: 10px 0;
+  position: absolute;
+  width: 30%;
+  height: 20px;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+.aside-global .icon-group .Bottom-Actions .u01 {
+  background: url("../images/icon-group.png") 0 0 no-repeat;
+}
+.aside-global .icon-group .Bottom-Actions .u02 {
+  background: url("../images/icon-group.png") -20px 0 no-repeat;
+}
+.aside-menu {
+  font-size: 0.8em;
+}
+.aside-menu .list-group .list-group-item {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #b7c0cd;
+}
+.aside-menu .list-group .list-group-item .u02 {
+  background: url("../images/icon-group.png") -20px 0 no-repeat;
+}
+.aside-menu .list-group .list-group-item .u03 {
+  background: url("../images/icon-group.png") -40px 0 no-repeat;
+}
+.aside-menu .list-group .list-group-item .u04 {
+  background: url("../images/icon-group.png") -60px 0 no-repeat;
+}
+.aside-menu .list-group .list-group-item .u05 {
+  background: url("../images/icon-group.png") -80px 0 no-repeat;
+}
+.aside-menu .list-group .list-group-item .u06 {
+  background: url("../images/icon-group.png") -100px 0 no-repeat;
+}
+.aside-menu .list-group .divider {
+  height: 1px;
+  margin: 9px 15px;
+  overflow: hidden;
+  background-color: #2a3547;
+}
+.aside-menu .Monthly-Goals {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+}
+.aside-menu .Monthly-Goals .progress {
+  margin: 10px 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2d3848;
+}
+.aside-menu .Monthly-Goals .progress .progress-bar {
+  height: 4px;
+  border-radius: 2px;
+  background-image: linear-gradient(to bottom, #7f5be6 0, #9d8fe3 100%);
+  background-repeat: repeat-x;
+}
+.content {
+  width: calc(100% - 22.15%);
+  margin-left: 22.15%;
+}
+.content .form-group {
+  position: relative;
+}
+.content .glyphicon-search {
+  position: absolute;
+  right: 5%;
+  top: 40%;
+}
+.content .text-wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.box-name-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 240px;
+  height: 60px;
+  padding-top: 10px;
+  z-index: 99;
+}
+.box-name-fixed .name-job {
+  color: #bfc7d8;
+}
+.box-name-fixed .name-job p:nth-child(1) {
+  color: #2399f1;
+}
+.box-name-fixed .glyphicon-chevron-down {
+  right: -100px;
+  top: -10px;
+  cursor: pointer;
+}
+.right-part {
+  margin-top: 62px;
+}
+.right-part .list-group-item {
+  border-left: none;
+  border-right: none;
+}
+.right-part .list-group-item .u07 {
+  background: url("../images/icon-group.png") -120px 0 no-repeat;
+}
+.right-part .list-group-item .u08 {
+  background: url("../images/icon-group.png") -140px 0 no-repeat;
+}
+.right-part .list-group-item .u09 {
+  background: url("../images/icon-group.png") -160px 0 no-repeat;
+}
+.right-part .list-group-item .u010 {
+  background: url("../images/icon-group.png") -176px 0 no-repeat;
+}
+.right-part .list-group-item .u011 {
+  background: url("../images/icon-group.png") -196px 0 no-repeat;
+}
+.right-part .list-group-item .divider {
+  display: inline-block;
+  padding-left: 30px;
+  height: 36px;
+  border-left: 1px solid #ccc;
+  margin: 0 10px;
+  vertical-align: top;
+  line-height: 36px;
+}
